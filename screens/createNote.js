@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
 import { StyleSheet, Text, View, TextInput, ScrollView, Button, KeyboardAvoidingView } from 'react-native';
 import { useState, useEffect } from 'react'
@@ -19,9 +18,6 @@ function createNote({navigation}) {
   const toStorage = (value) => {
     storeData(value)
   }
-
-
-
 
   const storeData = async (value) => {
 
@@ -96,14 +92,7 @@ function createNote({navigation}) {
         />
       </View>
 
-      <CButton title="Save Note" onPress={saveNote} bColor="#106276" />
-
-
- 
-
-
-
-      <StatusBar style="auto" />
+      <CButton title="Save Note" onPress={saveNote} bColor="#106276" /> 
       
     
       </KeyboardAvoidingView>

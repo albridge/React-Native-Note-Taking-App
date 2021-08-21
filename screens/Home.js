@@ -8,9 +8,7 @@ import {useContext, useEffect, useState} from 'react'
 const Home = ({navigation}) => {
     const [notes, setNotes] = useState([])
 
-    // useEffect(() => {
-    //     getData();
-    //   }, [])
+
 
     const newNote = () =>{
         navigation.navigate('createNote')
@@ -20,29 +18,13 @@ const Home = ({navigation}) => {
         navigation.navigate('Notes')
     }
 
-    // const getData = async () => {
-    //     try {
-    //       const jsonValue = await AsyncStorage.getItem('myNotes')
-    //       let data = jsonValue !== null ? JSON.parse(jsonValue) : null;
-    //       if (data !== null) {
-    //         setNotes(data);
-    //       }
-    //     } catch (e) {
-    
-    //     }
-    //   }
-
-
     return (
         <View style={styles.container}>
-
-
-
-<View style={styles.top}>
-    <Text style={styles.title}>BlueNotes</Text>
-    <Image style={styles.logo} source={require('../assets/icons/note1.png')} />
-    
-</View>
+        <View style={styles.top}>
+            <Text style={styles.title}>BlueNotes</Text>
+            <Image style={styles.logo} source={require('../assets/icons/note1.png')} />
+            
+        </View>
         <CButton title="Create Note" onPress={newNote} />
 
         <CButton title="View Notes" onPress={viewNotes} />
@@ -79,8 +61,7 @@ const styles = StyleSheet.create({
           alignItems:"center",
           position:"absolute",
           top:50,
-          alignSelf:"center",
-         
+          alignSelf:"center",      
 
       }
     

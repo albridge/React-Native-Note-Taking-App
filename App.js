@@ -28,6 +28,7 @@ function App() {
       <Stack.Screen  name="createNote" component={createNote} />
       <Stack.Screen  name="Notes" component={viewNotes} />
       <Stack.Screen  name="Update Note" component={updateNote} />
+  
 
         </Stack.Navigator>
     </NavigationContainer >
