@@ -58,7 +58,7 @@ const noteDetails = ({navigation,route}) => {
         }
 
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <View style={styles.holder}>
                 <Text style={styles.time}>{noteDate(item.createdAt)}</Text>
             <Text style={styles.titleStyle}>{item.title}</Text>
@@ -68,7 +68,7 @@ const noteDetails = ({navigation,route}) => {
             <CButton title="Delete" onPress={Delete} />
 
             
-        </View>
+        </ScrollView>
     )
 }
 

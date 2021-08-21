@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, ScrollView, StyleSheet, TextInput } from 'react-native'
+import { View, Text, ScrollView, StyleSheet, TextInput, KeyboardAvoidingView } from 'react-native'
 import CButton from '../components/CButton'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useState } from 'react';
@@ -47,7 +47,9 @@ const updateNote = ({navigation, route}) => {
 
 
     return (
-        <View styles={styles.container}>
+        
+        <ScrollView styles={styles.container}>
+            <KeyboardAvoidingView>
             <View>
                 <TextInput
                 placeholder="Title"
@@ -70,8 +72,9 @@ const updateNote = ({navigation, route}) => {
       </View>
 
       <CButton title="Update Note" onPress={Update} />
-            
-        </View>
+      </KeyboardAvoidingView>
+        </ScrollView>
+        
     )
 }
 

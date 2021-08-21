@@ -29,6 +29,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "Simple note taking app with crude functionality using usestate hook and async storage"
+    "description": "Simple note taking app with crude functionality using usestate hook and async storage. "
   }
 }

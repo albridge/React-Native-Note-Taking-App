@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
-import { StyleSheet, Text, View, TextInput, ScrollView, Button, TouchableHighlight } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView, Button, KeyboardAvoidingView } from 'react-native';
 import { useState, useEffect } from 'react'
 import CButton from '../components/CButton';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -73,6 +73,7 @@ function createNote({navigation}) {
   return (
     
     <ScrollView style={styles.container}>
+        <KeyboardAvoidingView>
       <Text style={styles.title}>BlueNotes</Text>
       <View>
         <TextInput
@@ -105,8 +106,9 @@ function createNote({navigation}) {
       <StatusBar style="auto" />
       
     
-
+      </KeyboardAvoidingView>
     </ScrollView>
+   
   );
 }
 
